@@ -1,0 +1,20 @@
+@import '../../styles/vars';
+@import '../../styles/placeholders';
+@import '../../styles/mixins';
+
+.header__title {
+  position: absolute;
+  width: 109px;
+  height: 36px;
+  left: 32px;
+  top: 22px;
+
+  font-family: 'Antonio';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+  color: $white;
+}
