@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+html,body {
+  margin: auto;
+}
+.App {
+  height: 100vh;
+  background-color: $black;
+  background-image: url('../../assets/background-stars.svg');
+  position: relative;
+}
+
