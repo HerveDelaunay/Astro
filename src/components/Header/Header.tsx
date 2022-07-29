@@ -4,8 +4,8 @@ import './Header.scss'
 const Header = () => {
   return (
     <div className='header'>
-      <a className='header__tile'>The Planets</a>
-      <div className='header__planetName'>
+      <a className='header__title'>The Planets</a>
+      <div className='header__planetNames'>
         {data.map((planet) => (
           <div>{planet.name}</div>
         ))
