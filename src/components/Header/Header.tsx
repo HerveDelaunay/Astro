@@ -2,7 +2,7 @@ import data from '../../assets/data.json'
 import './Header.scss'
 
 interface Props {
-  setPlanet: React.Dispatch<React.SetStateAction<number | undefined>>
+  setPlanet: React.Dispatch<React.SetStateAction<number>>
 }
 
 const Header: React.FC<Props> = ({setPlanet}) => {

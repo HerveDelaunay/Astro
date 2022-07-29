@@ -1,0 +1,79 @@
+@import '../../styles/vars';
+@import '../../styles/placeholders';
+@import '../../styles/mixins';
+
+.planet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 64.24%;
+  top: 20.70%;
+  // height: 52,83%;
+  height: 541px;
+  width: 24.30%;
+}
+.logo {
+  background-image: url('../../assets/planet-mercury.svg');
+  @extend %mercury;
+}
+.planet__title {
+  @extend %h1;
+  // position: absolute;
+  // left: 64.24%;
+  // top: 20.70%;
+  text-transform: uppercase;
+}
+.planet__description {
+  @extend %body;
+  width: 100%;
+  //width: 24.31%;
+  //height: 14.65%;
+  //position: absolute;
+  // top: 33.1%;
+  // left: 64.24%;
+}
+.planet__source {
+  @extend %body;
+  mix-blend-mode: normal;
+  color: rgb(255, 255, 255, 0.5);
+  // position: absolute;
+  // left: 64.24%;
+  // top: 50.09%;
+}
+.planet__link {
+  color: inherit;
+}
+.planet__buttons {
+  width: 100%;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.button {
+  @extend %h3;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  mix-blend-mode: normal;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  position: relative;
+}
+.button:hover {
+  background-color: $grey;
+}
+.button:focus {
+  background-color: $light-blue;
+}
+.button__number {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  color: rgb(255, 255, 255, 0.2);
+}
+.button__title {
+  position: absolute;
+  top: 25%;
+  left: 21.14%;
+}

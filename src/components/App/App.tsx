@@ -4,7 +4,7 @@ import './App.scss';
 import { useState } from 'react';
 
 function App() {
-  const [planet, setPlanet] = useState<number | undefined>()
+  const [planet, setPlanet] = useState<number>(0)
 
   return (
     <div className="App">

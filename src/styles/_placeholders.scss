@@ -3,12 +3,14 @@
   font-family: 'Antonio', sans-serif;
   font-size: 80px;
   line-height: 103px;
+  color: $white;
 }
 %h2 {
   font-family: 'Antonio', sans-serif;
   font-size: 40px;
   line-height: 52px;
   letter-spacing: -1.5px;
+  color: $white;
 }
 %h3 {
   font-family: 'League Spartan', sans-serif;
@@ -16,6 +18,7 @@
   line-height: 25px;
   letter-spacing: 2.6px;
   font-weight: bold;
+  color: $white;
 }
 %h4 {
   font-family: 'League Spartan', sans-serif;
@@ -23,9 +26,19 @@
   line-height: 25px;
   letter-spacing: 1px;
   font-weight: bold;
+  color: $white;
 }
 %body {
   font-family: 'League Spartan', sans-serif;
   font-size: 14px;
   line-height: 25px;
+  font-weight: normal;
+  color: $white;
+}
+%mercury {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  left: 23.26%;
+  top: 32.03%;
 }
