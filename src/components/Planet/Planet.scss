@@ -60,14 +60,36 @@
   mix-blend-mode: normal;
   border: 1px solid rgb(255, 255, 255, 0.2);
   position: relative;
-}
-.button:hover {
-  background-color: $grey;
-  border: none;
-}
-.button:focus {
-  background-color: $light-blue;
-  border: none;
+
+  &:hover {
+    background-color: $grey;
+    border: none;
+  }
+
+  &--0:focus {
+    @include btn-focus($light-blue)
+  }
+  &--1:focus {
+    @include btn-focus($yellow)
+  }
+  &--2:focus {
+    @include btn-focus($purple)
+  }
+  &--3:focus {
+    @include btn-focus($orange)
+  }
+  &--4:focus {
+    @include btn-focus($red)
+  }
+  &--5:focus {
+    @include btn-focus($orange-mat)
+  }
+  &--6:focus {
+    @include btn-focus($green)
+  }
+  &--7:focus {
+    @include btn-focus($blue)
+  }
 }
 .button__number {
   position: absolute;

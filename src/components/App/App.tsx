@@ -5,10 +5,11 @@ import { useState } from 'react';
 
 function App() {
   const [planet, setPlanet] = useState<number>(0)
+  const [planetClass, setplanetClass] = useState("Mercure")
 
   return (
     <div className="App">
-      <Header setPlanet={setPlanet}/>
+      <Header setPlanet={setPlanet} setPlanetClass={setplanetClass} planetId={planet}/>
       <Planet planetId={planet}/>
     </div>
   );

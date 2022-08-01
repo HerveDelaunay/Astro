@@ -6,6 +6,7 @@ interface Props {
   planetId: number
 }
 const Planet: React.FC<Props> = ({planetId}) => {
+  // const planetIdToString = planetId.toString()
   return (
     <>
       <div className='logo'></div>
@@ -14,15 +15,15 @@ const Planet: React.FC<Props> = ({planetId}) => {
         <div className='planet__description'>{data[planetId].overview.content}</div>
         <div className='planet__source'>Source : <a href={data[planetId].overview.source} className='planet__link'>Wikipedia</a></div>
         <div className='planet__buttons'>
-          <button className='button' onClick={()=>{}}>
+          <button className={`button button--${planetId}`} onClick={()=>{}}>
             <div className='button__number'>01</div>
             <div className='button__title'>OVERVIEW</div>
           </button>
-          <button className='button' onClick={()=>{}}>
+          <button className={`button button--${planetId}`} onClick={()=>{}}>
             <div className='button__number'>02</div>
             <div className='button__title'>INTERNAL STRUCTURE</div>
           </button>
-          <button className='button' onClick={()=>{}}>
+          <button className={`button button--${planetId}`} onClick={()=>{}}>
             <div className='button__number'>03</div>
             <div className='button__title'>SURFACE GEOLOGY</div>
           </button>
