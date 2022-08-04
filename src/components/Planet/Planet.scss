@@ -9,13 +9,148 @@
   position: absolute;
   left: 64.24%;
   top: 20.70%;
-  // height: 52,83%;
-  height: 541px;
+  height: 52.83%;
+  //height: 541px;
   width: 24.30%;
 }
 .logo {
-  background-image: url('../../assets/planet-mercury.svg');
-  @extend %mercury;
+
+  &--0{
+    background-image: url('../../assets/planet-mercury.svg');
+    @extend %mercury;
+  }
+  &--1{
+    background-image: url('../../assets/planet-venus.svg');
+    @extend %venus;
+  }
+  &--2{
+    background-image: url('../../assets/planet-earth.svg');
+    @extend %earth;
+  }
+  &--3{
+    background-image: url('../../assets/planet-mars.svg');
+    @extend %mars;
+  }
+  &--4{
+    background-image: url('../../assets/planet-jupiter.svg');
+    @extend %jupiter;
+  }
+  &--5{
+    background-image: url('../../assets/planet-saturn.svg');
+    @extend %saturn;
+  }
+  &--6{
+    background-image: url('../../assets/planet-uranus.svg');
+    @extend %uranus;
+  }
+  &--7{
+    background-image: url('../../assets/planet-neptune.svg');
+    @extend %neptune;
+  }
+}
+.logo__internal {
+
+  &--0{
+    background-image: url('../../assets/planet-mercury-internal.svg');
+    @extend %mercury;
+  }
+  &--1{
+    background-image: url('../../assets/planet-venus-internal.svg');
+    @extend %venus;
+  }
+  &--2{
+    background-image: url('../../assets/planet-earth-internal.svg');
+    @extend %earth;
+  }
+  &--3{
+    background-image: url('../../assets/planet-mars-internal.svg');
+    @extend %mars;
+  }
+  &--4{
+    background-image: url('../../assets/planet-jupiter-internal.svg');
+    @extend %jupiter;
+  }
+  &--5{
+    background-image: url('../../assets/planet-saturn-internal.svg');
+    @extend %saturn;
+  }
+  &--6{
+    background-image: url('../../assets/planet-uranus-internal.svg');
+    @extend %uranus;
+  }
+  &--7{
+    background-image: url('../../assets/planet-neptune-internal.svg');
+    @extend %neptune;
+  }
+}
+.logo__surface {
+  &--0{
+    background-image: url('../../assets/planet-mercury.svg');
+    @extend %mercury;
+  }
+  &--1{
+    background-image: url('../../assets/planet-venus.svg');
+    @extend %venus;
+  }
+  &--2{
+    background-image: url('../../assets/planet-earth.svg');
+    @extend %earth;
+  }
+  &--3{
+    background-image: url('../../assets/planet-mars.svg');
+    @extend %mars;
+  }
+  &--4{
+    background-image: url('../../assets/planet-jupiter.svg');
+    @extend %jupiter;
+  }
+  &--5{
+    background-image: url('../../assets/planet-saturn.svg');
+    @extend %saturn;
+  }
+  &--6{
+    background-image: url('../../assets/planet-uranus.svg');
+    @extend %uranus;
+  }
+  &--7{
+    background-image: url('../../assets/planet-neptune.svg');
+    @extend %neptune;
+  }
+}
+.logo__surface {
+
+  &--0{
+    background-image: url('../../assets/geology-mercury.png');
+    @extend %mercury-surface
+  }
+  &--1{
+    background-image: url('../../assets/geology-venus.png');
+    @extend %venus-surface
+  }
+  &--2{
+    background-image: url('../../assets/geology-earth.png');
+    @extend %earth-surface
+  }
+  &--3{
+    background-image: url('../../assets/geology-mars.png');
+    @extend %mars-surface
+  }
+  &--4{
+    background-image: url('../../assets/geology-jupiter.png');
+    @extend %jupiter-surface
+  }
+  &--5{
+    background-image: url('../../assets/geology-saturn.png');
+    @extend %saturn-surface
+  }
+  &--6{
+    background-image: url('../../assets/geology-uranus.png');
+    @extend %uranus-surface
+  }
+  &--7{
+    background-image: url('../../assets/geology-neptune.png');
+    @extend %neptune-surface
+  }
 }
 .planet__title {
   @extend %h1;

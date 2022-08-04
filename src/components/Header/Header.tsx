@@ -1,12 +1,7 @@
 import { useState } from 'react'
 import data from '../../assets/data.json'
 import './Header.scss'
-
-interface Props {
-  setPlanet: React.Dispatch<React.SetStateAction<number>>,
-  setPlanetClass: React.Dispatch<React.SetStateAction<string>>,
-  planetId: number
-}
+import Props from './Type'
 
 interface PlanetData {
     name: string,
@@ -33,10 +28,9 @@ interface PlanetData {
     }
 }
 
-const Header: React.FC<Props> = ({setPlanet, setPlanetClass, planetId}) => {
+const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology}) => {
   const handleClick = (planet:PlanetData) => {
     setPlanet(data.indexOf(planet))
-    // setPlanetClass(planet.name)
   }
   
   return (

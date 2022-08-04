@@ -11,6 +11,7 @@
   line-height: 52px;
   letter-spacing: -1.5px;
   color: $white;
+  text-transform: uppercase;
 }
 %h3 {
   font-family: 'League Spartan', sans-serif;
@@ -27,6 +28,7 @@
   letter-spacing: 1px;
   font-weight: bold;
   color: $white;
+  text-transform: capitalize;
 }
 %body {
   font-family: 'League Spartan', sans-serif;
@@ -39,11 +41,131 @@
   position: absolute;
   width: 290px;
   height: 290px;
-  left: 23.26%;
+  left: 23.2638%;
   top: 32.03%;
 }
-
+%venus {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  left: 19.44%;
+  top: 26.66%;
+}
+%earth {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 17.71%;
+  top: 24.22%;
+}
+%mars {
+  position: absolute;
+  width: 336px;
+  height: 336px;
+  left: 21.67%;
+  top: 29.78%;
+}
+%jupiter {
+  position: absolute;
+  width: 582px;
+  height: 582px;
+  left: 13.12%;
+  top: 17.77%;
+}
+%saturn {
+  position: absolute;
+  width: 666.09px;
+  height: 666.09px;
+  left: 10.20%;
+  top: 15.22%;
+}
+%uranus {
+  position: absolute;
+  width: 458px;
+  height: 458px;
+  left: 17.43%;
+  top: 23.83%;
+}
+%neptune {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 17.71%;
+  top: 24.22%;
+}
 %btn-hover {
   background-color: $grey;
   border: none;
+}
+%mercury-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 23.2638%;
+  top: 32.03%;
+  transform: translate(40%, 113%);
+  background-size: cover;
+}
+%venus-surface {
+  position: absolute;
+  height: 199px;
+  width: 163px;
+  left: 19.44%;
+  top: 26.66%;
+  transform: translate(73%, 140%);
+  background-size: cover;
+}
+%earth-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 17.71%;
+  top: 24.22%;
+  transform: translate(89%, 154%);
+  background-size: cover;
+}
+%mars-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 21.67%;
+  top: 29.78%;
+  transform: translate(54%, 125%);
+  background-size: cover;
+}
+%jupiter-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 13.12%;
+  top: 17.77%;
+  transform: translate(128%, 187%);
+  background-size: cover;
+}
+%saturn-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 10.20%;
+  top: 15.22%;
+  transform: translate(155%, 200%);
+  background-size: cover;
+}
+%uranus-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 17.43%;
+  top: 23.83%;
+  transform: translate(91%, 160%);
+  background-size: cover;
+}
+%neptune-surface {
+  position: absolute;
+  width: 163px;
+  height: 199px;
+  left: 17.71%;
+  top: 24.22%;
+  transform: translate(88%, 153%);
+  background-size: cover;
 }
