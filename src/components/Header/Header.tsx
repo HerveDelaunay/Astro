@@ -1,17 +1,25 @@
+import { useState } from 'react'
 import data from '../../assets/data.json'
 import './Header.scss'
+import Props from './Type'
+import PlanetData from '../PlanetDataType'
 
-interface Props {
-  setPlanet: React.Dispatch<React.SetStateAction<number | undefined>>
-}
-
-const Header: React.FC<Props> = ({setPlanet}) => {
+const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology, setOverview}) => {
+  const handleClick = (planet:PlanetData) => {
+    setPlanet(data.indexOf(planet))
+    setInternalStructure(false)
+    setSurfaceGeology(false)
+    setOverview(true)
+  }
+  
   return (
     <div className='header'>
-      <a className='header__title'>The Planets</a>
+      <a href='#' className='header__title'>The Planets</a>
       <div className='header__planetNames'>
-        {data.map((planet) => (
-          <a onClick={() => setPlanet(data.indexOf(planet))}>{planet.name}</a>
+        {
+          data.map((planet) => (
+            <a href='#' className={`planetLink planetLink--${planetId}`} onClick={() => handleClick(planet)}>
+              {planet.name}</a>
           ))
         }
       </div>

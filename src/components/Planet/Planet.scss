@@ -1,0 +1,204 @@
+@import '../../styles/vars';
+@import '../../styles/placeholders';
+@import '../../styles/mixins';
+
+.planet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 64.24%;
+  top: 20.70%;
+  height: 52.83%;
+  //height: 541px;
+  width: 24.30%;
+}
+.logo {
+
+  &--0{
+    background-image: url('../../assets/planet-mercury.svg');
+    @extend %mercury;
+  }
+  &--1{
+    background-image: url('../../assets/planet-venus.svg');
+    @extend %venus;
+  }
+  &--2{
+    background-image: url('../../assets/planet-earth.svg');
+    @extend %earth;
+  }
+  &--3{
+    background-image: url('../../assets/planet-mars.svg');
+    @extend %mars;
+  }
+  &--4{
+    background-image: url('../../assets/planet-jupiter.svg');
+    @extend %jupiter;
+  }
+  &--5{
+    background-image: url('../../assets/planet-saturn.svg');
+    @extend %saturn;
+  }
+  &--6{
+    background-image: url('../../assets/planet-uranus.svg');
+    @extend %uranus;
+  }
+  &--7{
+    background-image: url('../../assets/planet-neptune.svg');
+    @extend %neptune;
+  }
+}
+.logo__internal {
+
+  &--0{
+    background-image: url('../../assets/planet-mercury-internal.svg');
+    @extend %mercury;
+  }
+  &--1{
+    background-image: url('../../assets/planet-venus-internal.svg');
+    @extend %venus;
+  }
+  &--2{
+    background-image: url('../../assets/planet-earth-internal.svg');
+    @extend %earth;
+  }
+  &--3{
+    background-image: url('../../assets/planet-mars-internal.svg');
+    @extend %mars;
+  }
+  &--4{
+    background-image: url('../../assets/planet-jupiter-internal.svg');
+    @extend %jupiter;
+  }
+  &--5{
+    background-image: url('../../assets/planet-saturn-internal.svg');
+    @extend %saturn;
+  }
+  &--6{
+    background-image: url('../../assets/planet-uranus-internal.svg');
+    @extend %uranus;
+  }
+  &--7{
+    background-image: url('../../assets/planet-neptune-internal.svg');
+    @extend %neptune;
+  }
+}
+.logo__surface {
+
+  &--0{
+    background-image: url('../../assets/geology-mercury.png');
+    @extend %mercury-surface
+  }
+  &--1{
+    background-image: url('../../assets/geology-venus.png');
+    @extend %venus-surface
+  }
+  &--2{
+    background-image: url('../../assets/geology-earth.png');
+    @extend %earth-surface
+  }
+  &--3{
+    background-image: url('../../assets/geology-mars.png');
+    @extend %mars-surface
+  }
+  &--4{
+    background-image: url('../../assets/geology-jupiter.png');
+    @extend %jupiter-surface
+  }
+  &--5{
+    background-image: url('../../assets/geology-saturn.png');
+    @extend %saturn-surface
+  }
+  &--6{
+    background-image: url('../../assets/geology-uranus.png');
+    @extend %uranus-surface
+  }
+  &--7{
+    background-image: url('../../assets/geology-neptune.png');
+    @extend %neptune-surface
+  }
+}
+.planet__title {
+  @extend %h1;
+  // position: absolute;
+  // left: 64.24%;
+  // top: 20.70%;
+  text-transform: uppercase;
+}
+.planet__description {
+  @extend %body;
+  width: 100%;
+  //width: 24.31%;
+  //height: 14.65%;
+  //position: absolute;
+  // top: 33.1%;
+  // left: 64.24%;
+}
+.planet__source {
+  @extend %body;
+  mix-blend-mode: normal;
+  color: rgb(255, 255, 255, 0.5);
+  // position: absolute;
+  // left: 64.24%;
+  // top: 50.09%;
+}
+.planet__link {
+  color: inherit;
+}
+.planet__buttons {
+  width: 100%;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.button {
+  @extend %h3;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  background-color: inherit;
+  mix-blend-mode: normal;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  position: relative;
+
+    &:hover {
+      background-color: $grey;
+      border: none;
+    }
+    &--active--0 {
+      @include btn-active($light-blue)
+    }
+    &--active--1 {
+      @include btn-active($yellow)
+    }
+    &--active--2 {
+      @include btn-active($purple)
+    }
+    &--active--3 {
+      @include btn-active($orange)
+    }
+    &--active--4 {
+      @include btn-active($red)
+    }
+    &--active--5 {
+      @include btn-active($orange-mat)
+    }
+    &--active--6 {
+      @include btn-active($green)
+    }
+    &--active--7 {
+      @include btn-active($blue)
+    }
+}
+.button__number {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  color: rgb(255, 255, 255, 0.2);
+}
+.button__title {
+  position: absolute;
+  top: 25%;
+  left: 21.14%;
+}
