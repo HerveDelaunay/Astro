@@ -3,7 +3,9 @@ interface Props {
   internalStructure?: boolean,
   surfaceGeology?: boolean,
   setSurfaceGeology: React.Dispatch<React.SetStateAction<boolean>>,
-  planetId: number
+  planetId: number,
+  overview: boolean,
+  setOverview: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default Props

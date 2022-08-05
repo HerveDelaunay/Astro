@@ -16,7 +16,8 @@
   }
 }
 
-@mixin btn-focus ($color){
+@mixin btn-active ($color){
   background-color: $color;
   border: none;
+  pointer-events: none;
 }

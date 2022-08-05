@@ -84,40 +84,6 @@
   }
 }
 .logo__surface {
-  &--0{
-    background-image: url('../../assets/planet-mercury.svg');
-    @extend %mercury;
-  }
-  &--1{
-    background-image: url('../../assets/planet-venus.svg');
-    @extend %venus;
-  }
-  &--2{
-    background-image: url('../../assets/planet-earth.svg');
-    @extend %earth;
-  }
-  &--3{
-    background-image: url('../../assets/planet-mars.svg');
-    @extend %mars;
-  }
-  &--4{
-    background-image: url('../../assets/planet-jupiter.svg');
-    @extend %jupiter;
-  }
-  &--5{
-    background-image: url('../../assets/planet-saturn.svg');
-    @extend %saturn;
-  }
-  &--6{
-    background-image: url('../../assets/planet-uranus.svg');
-    @extend %uranus;
-  }
-  &--7{
-    background-image: url('../../assets/planet-neptune.svg');
-    @extend %neptune;
-  }
-}
-.logo__surface {
 
   &--0{
     background-image: url('../../assets/geology-mercury.png');
@@ -196,35 +162,34 @@
   border: 1px solid rgb(255, 255, 255, 0.2);
   position: relative;
 
-  &:hover {
-    background-color: $grey;
-    border: none;
-  }
-
-  &--0:focus {
-    @include btn-focus($light-blue)
-  }
-  &--1:focus {
-    @include btn-focus($yellow)
-  }
-  &--2:focus {
-    @include btn-focus($purple)
-  }
-  &--3:focus {
-    @include btn-focus($orange)
-  }
-  &--4:focus {
-    @include btn-focus($red)
-  }
-  &--5:focus {
-    @include btn-focus($orange-mat)
-  }
-  &--6:focus {
-    @include btn-focus($green)
-  }
-  &--7:focus {
-    @include btn-focus($blue)
-  }
+    &:hover {
+      background-color: $grey;
+      border: none;
+    }
+    &--active--0 {
+      @include btn-active($light-blue)
+    }
+    &--active--1 {
+      @include btn-active($yellow)
+    }
+    &--active--2 {
+      @include btn-active($purple)
+    }
+    &--active--3 {
+      @include btn-active($orange)
+    }
+    &--active--4 {
+      @include btn-active($red)
+    }
+    &--active--5 {
+      @include btn-active($orange-mat)
+    }
+    &--active--6 {
+      @include btn-active($green)
+    }
+    &--active--7 {
+      @include btn-active($blue)
+    }
 }
 .button__number {
   position: absolute;
