@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import data from '../../assets/data.json'
 import './Header.scss'
 import Props from './Type'
 import PlanetData from '../PlanetDataType'
+import { Link } from 'react-router-dom'
 
 const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology, setOverview}) => {
   const handleClick = (planet:PlanetData) => {
@@ -18,8 +19,9 @@ const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, set
       <div className='header__planetNames'>
         {
           data.map((planet) => (
-            <a href='#' className={`planetLink planetLink--${planetId}`} onClick={() => handleClick(planet)}>
-              {planet.name}</a>
+            <Link to={`${planet.name}`} className={`planetLink ${window.location.pathname === `/${planet.name}` ? `planetLink--${planetId}` : '' }`} 
+              onClick={() => handleClick(planet)}>
+              {planet.name}</Link>
           ))
         }
       </div>
