@@ -3,18 +3,30 @@
 @import '../../styles/mixins';
 
 .planetStats {
-  position: absolute;
-  top: 82.03%;
-  left: 11.46%;
   display: flex;
   justify-content: space-between;
-  width: 77.083%;
-  height: 12.5%;
+  @include mq-desktop {
+    position: absolute;
+    top: 82.03%;
+    left: 11.46%;
+    width: 77.083%;
+    height: 12.5%;
+  }
+  @include mq-tablet {
+    position: absolute;
+    top: 87.89%;
+    left: 5.078%;
+    width: 89.71%;
+    height: 8.593%;
+  }
 }
 .planetStats__card {
   width: 22.97%;
   border: solid 1px rgb(255, 255, 255, 0.2);
   position: relative;
+  @include mq-tablet {
+    width: 23.802%;
+  }
 }
 .card {
   display: flex;

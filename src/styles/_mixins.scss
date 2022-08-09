@@ -1,17 +1,17 @@
 @mixin mq-mobile {
-  @media screen and (min-width: $mq-mobile) {
+  @media screen and (max-width: $mq-mobile) {
     @content;
   }
 }
 
 @mixin mq-tablet {
-  @media screen and (min-width: $mq-tablet) {
+  @media screen and (max-width: $mq-tablet) {
     @content;
   }
 }
 
 @mixin mq-desktop {
-  @media screen and (min-width: $mq-desktop) {
+  @media screen and (min-width: $mq-tablet) {
     @content;
   }
 }

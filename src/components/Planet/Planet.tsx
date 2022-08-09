@@ -36,18 +36,20 @@ const Planet: React.FC<Props> = ({planetId, internalStructure, setInternalStruct
         )
       }
       <section className='planet'>
-        <div className='planet__title'>{data[planetId].name}</div>
-        <div className='planet__description'>
-          { internalStructure ? data[planetId].structure.content 
-          : surfaceGeology ? data[planetId].geology.content 
-          : data[planetId].overview.content }
-        </div>
-        <div className='planet__source'>Source : <a href=
-          { internalStructure ? data[planetId].structure.source 
-            : surfaceGeology ? data[planetId].geology.source 
-            : data[planetId].overview.source } 
-          className='planet__link'>Wikipedia</a>
-        </div>
+        <article className='planet__article'>
+          <div className='planet__title'>{data[planetId].name}</div>
+          <div className='planet__description'>
+            { internalStructure ? data[planetId].structure.content 
+            : surfaceGeology ? data[planetId].geology.content 
+            : data[planetId].overview.content }
+          </div>
+          <div className='planet__source'>Source : <a href=
+            { internalStructure ? data[planetId].structure.source 
+              : surfaceGeology ? data[planetId].geology.source 
+              : data[planetId].overview.source } 
+            className='planet__link'>Wikipedia</a>
+          </div>
+        </article>
         <div className='planet__buttons'>
           { overview ? (
             <button className={`button button--active--${planetId}`} onClick={()=>handleClickOverview()}>

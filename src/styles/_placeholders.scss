@@ -1,9 +1,16 @@
+@import './mixins';
 // fonts
 %h1 {
   font-family: 'Antonio', sans-serif;
-  font-size: 80px;
-  line-height: 103px;
   color: $white;
+  @include mq-desktop {
+    font-size: 80px;
+    line-height: 103px;
+  }
+  @include mq-tablet {
+    font-size: 48px;
+    line-height: 61px;
+  }
 }
 %h2 {
   font-family: 'Antonio', sans-serif;
@@ -12,30 +19,53 @@
   letter-spacing: -1.5px;
   color: $white;
   text-transform: uppercase;
+  @include mq-tablet {
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.9px;
+  }
 }
 %h3 {
   font-family: 'League Spartan', sans-serif;
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: 2.6px;
   font-weight: bold;
   color: $white;
+  @include mq-desktop {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.6px;
+  }
+  @include mq-tablet {
+    font-size: 9px;
+    line-height: 25px;
+    letter-spacing: 1.93px;
+  }
 }
 %h4 {
   font-family: 'League Spartan', sans-serif;
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
   font-weight: bold;
   color: $white;
   text-transform: capitalize;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  @include mq-tablet {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.73px;
+  }
 }
 %body {
   font-family: 'League Spartan', sans-serif;
-  font-size: 14px;
-  line-height: 25px;
   font-weight: normal;
   color: $white;
+  @include mq-desktop {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  @include mq-tablet {
+    font-size: 11px;
+    line-height: 22px;
+  }
 }
 %mercury {
   position: absolute;
@@ -43,6 +73,13 @@
   height: 290px;
   left: 23.2638%;
   top: 32.03%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 184px;
+    height: 184px;
+    left: 38.15%;
+    top: 29.88%;
+  }
 }
 %venus {
   position: absolute;
@@ -50,6 +87,13 @@
   width: 400px;
   left: 19.44%;
   top: 26.66%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 253px;
+    height: 253px;
+    left: 33.59%;
+    top: 26.56%;
+  }
 }
 %earth {
   position: absolute;
@@ -57,6 +101,13 @@
   height: 450px;
   left: 17.71%;
   top: 24.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 285px;
+    height: 285px;
+    left: 31.51%;
+    top: 25%;
+  }
 }
 %mars {
   position: absolute;
@@ -64,6 +115,13 @@
   height: 336px;
   left: 21.67%;
   top: 29.78%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 213px;
+    height: 213px;
+    left: 36.197%;
+    top: 28.515%;
+  }
 }
 %jupiter {
   position: absolute;
@@ -71,6 +129,13 @@
   height: 582px;
   left: 13.12%;
   top: 17.77%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 369px;
+    height: 369px;
+    left: 26.041%;
+    top: 20.898%;
+  }
 }
 %saturn {
   position: absolute;
@@ -78,6 +143,13 @@
   height: 666.09px;
   left: 10.20%;
   top: 15.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 422px;
+    height: 422px;
+    left: 22.526%;
+    top: 18.261;
+  }
 }
 %uranus {
   position: absolute;
@@ -85,6 +157,13 @@
   height: 458px;
   left: 17.43%;
   top: 23.83%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 290px;
+    height: 290px;
+    left: 31.25%;
+    top: 24.7%;
+  }
 }
 %neptune {
   position: absolute;
@@ -92,6 +171,13 @@
   height: 450px;
   left: 17.71%;
   top: 24.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 285px;
+    height: 285px;
+    left: 31.51%;
+    top: 25%;
+  }
 }
 %btn-hover {
   background-color: $grey;
@@ -99,73 +185,146 @@
 }
 %mercury-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 23.2638%;
-  top: 32.03%;
-  transform: translate(40%, 113%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 23.2638%;
+    top: 32.03%;
+    transform: translate(40%, 113%);
+  }
+  @include mq-tablet {
+    background-size: cover;
+    width: 103.342px;
+    height: 126.166px;
+    left: 23.2638%;
+    top: 32.03%;
+    transform: translate(149%, 95%);
+    }
 }
 %venus-surface {
   position: absolute;
-  height: 199px;
-  width: 163px;
-  left: 19.44%;
-  top: 26.66%;
-  transform: translate(73%, 140%);
   background-size: cover;
+  @include mq-desktop {
+    height: 199px;
+    width: 163px;
+    left: 19.44%;
+    top: 26.66%;
+    transform: translate(73%, 140%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 19.44%;
+    top: 26.66%;
+    transform: translate(177%, 140%);
+    }
 }
 %earth-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.71%;
-  top: 24.22%;
-  transform: translate(89%, 154%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(89%, 154%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(189%, 159%);
+    }
 }
 %mars-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 21.67%;
-  top: 29.78%;
-  transform: translate(54%, 125%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 21.67%;
+    top: 29.78%;
+    transform: translate(54%, 125%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 21.67%;
+    top: 29.78%;
+    transform: translate(160%, 116%);
+    }
 }
 %jupiter-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 13.12%;
-  top: 17.77%;
-  transform: translate(128%, 187%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 13.12%;
+    top: 17.77%;
+    transform: translate(128%, 187%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 13.12%;
+    top: 17.77%;
+    transform: translate(224%, 213%);
+  }
 }
 %saturn-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 10.20%;
-  top: 15.22%;
-  transform: translate(155%, 200%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 10.20%;
+    top: 15.22%;
+    transform: translate(155%, 200%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 10.20%;
+    top: 15.22%;
+    transform: translate(244%, 200%);
+  }
 }
 %uranus-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.43%;
-  top: 23.83%;
-  transform: translate(91%, 160%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.43%;
+    top: 23.83%;
+    transform: translate(91%, 160%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 17.43%;
+    top: 23.83%;
+    transform: translate(192%, 165%);
+    }
 }
 %neptune-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.71%;
-  top: 24.22%;
-  transform: translate(88%, 153%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(88%, 153%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(190%, 160%);
+    }
 }

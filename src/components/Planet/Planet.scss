@@ -2,17 +2,6 @@
 @import '../../styles/placeholders';
 @import '../../styles/mixins';
 
-.planet {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  left: 64.24%;
-  top: 20.70%;
-  height: 52.83%;
-  //height: 541px;
-  width: 24.30%;
-}
 .logo {
 
   &--0{
@@ -87,81 +76,125 @@
 
   &--0{
     background-image: url('../../assets/geology-mercury.png');
-    @extend %mercury-surface
+    @extend %mercury-surface;
   }
   &--1{
     background-image: url('../../assets/geology-venus.png');
-    @extend %venus-surface
+    @extend %venus-surface;
   }
   &--2{
     background-image: url('../../assets/geology-earth.png');
-    @extend %earth-surface
+    @extend %earth-surface;
   }
   &--3{
     background-image: url('../../assets/geology-mars.png');
-    @extend %mars-surface
+    @extend %mars-surface;
   }
   &--4{
     background-image: url('../../assets/geology-jupiter.png');
-    @extend %jupiter-surface
+    @extend %jupiter-surface;
   }
   &--5{
     background-image: url('../../assets/geology-saturn.png');
-    @extend %saturn-surface
+    @extend %saturn-surface;
   }
   &--6{
     background-image: url('../../assets/geology-uranus.png');
-    @extend %uranus-surface
+    @extend %uranus-surface;
   }
   &--7{
     background-image: url('../../assets/geology-neptune.png');
-    @extend %neptune-surface
+    @extend %neptune-surface;
+  }
+}
+.planet {
+  // @include mq-desktop {
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   left: 64.24%;
+  //   top: 20.70%;
+  //   height: 52.83%;
+  //   width: 24.30%;
+  // }
+  @include mq-tablet {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 60.546%;
+    left: 5.078%;
+    width: 89.71%;
+    height: 24.7%;
+  }
+}
+.planet__article {
+  display: flex;
+  @include mq-desktop {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 64.24%;
+    top: 20.70%;
+    width: 24.30%;
+    height: 31.83%;
+  }
+  @include mq-tablet {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 49.20%;
+    height: 100%;
   }
 }
 .planet__title {
-  @extend %h1;
-  // position: absolute;
-  // left: 64.24%;
-  // top: 20.70%;
   text-transform: uppercase;
+  @extend %h1;
 }
 .planet__description {
   @extend %body;
+  text-align: start;
   width: 100%;
-  //width: 24.31%;
-  //height: 14.65%;
-  //position: absolute;
-  // top: 33.1%;
-  // left: 64.24%;
 }
 .planet__source {
   @extend %body;
   mix-blend-mode: normal;
   color: rgb(255, 255, 255, 0.5);
-  // position: absolute;
-  // left: 64.24%;
-  // top: 50.09%;
 }
 .planet__link {
   color: inherit;
 }
 .planet__buttons {
-  width: 100%;
-  height: 176px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mq-desktop {
+    position: absolute;
+    height: 176px;
+    top: 56.347%;
+    width: 24.30%;
+    height: 17.187%;
+    left: 64.24%;
+  }
+  @include mq-tablet {
+    top: 56.347%;
+    width: 40.78%;
+    height: 60.07%;
+  }
 }
 .button {
   @extend %h3;
   width: 100%;
-  height: 48px;
   box-sizing: border-box;
   background-color: inherit;
   mix-blend-mode: normal;
   border: 1px solid rgb(255, 255, 255, 0.2);
   position: relative;
-
+  @include mq-desktop {
+    height: 48px;
+  }
+  @include mq-tablet {
+    height: 26.31%;
+  }
     &:hover {
       background-color: $grey;
       border: none;
