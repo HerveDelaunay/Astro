@@ -16,6 +16,13 @@
   text-transform: uppercase;
   color: $white;
   text-decoration: none;
+
+  // @include mq-desktop {
+  //   top: 3.13%;
+  // }
+  // @include mq-tablet {
+  //   top: 3.13%;
+  // }
 }
 .header__planetNames {
   @extend %h4;
@@ -28,6 +35,14 @@
   height: 6.35%;
   right: 2.78%;
   top: 0%;
+
+  // @include mq-desktop {
+  //   top: 3.13%;
+  // }
+  // @include mq-tablet {
+  //   top: 10.45%;
+  //   right: 6.77%;
+  // }
 }
 .header__patternDivider {
   position: absolute;
@@ -47,32 +62,44 @@
   height: 100%;
   position: relative;
 
-  &--0:focus {
-    border-top: solid 3px $light-blue;
+  &--0 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $light-blue;
   }
-  &--1:focus {
-    border-top: solid 3px $yellow;
+  &--1 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $yellow;
   }
-  &--2:focus {
-    border-top: solid 3px $purple;
+  &--2 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $purple;
   }
-  &--3:focus {
-    border-top: solid 3px $orange;
+  &--3 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $orange;
   }
-  &--4:focus {
-    border-top: solid 3px $red;
+  &--4 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $red;
   }
-  &--5:focus {
-    border-top: solid 3px $orange-mat;
+  &--5 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $orange-mat;
   }
-  &--6:focus {
-    border-top: solid 3px $green;
+  &--6 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $green;
   }
-  &--7:focus {
-    border-top: solid 3px $blue;
+  &--7 {
+    color: white;
+    padding-top: 28px;
+    border-top: solid 5px $blue;
   }
-}
-.planetLink:focus {
-  color: white;
-  padding-top: 30px;
 }
