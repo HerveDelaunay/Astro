@@ -148,7 +148,7 @@
     width: 422px;
     height: 422px;
     left: 22.526%;
-    top: 18.261;
+    top: 18.261%;
   }
 }
 %uranus {
@@ -175,7 +175,7 @@
   @include mq-tablet {
     width: 285px;
     height: 285px;
-    left: 31.51%;
+    left: 30%;
     top: 25%;
   }
 }
@@ -197,9 +197,9 @@
     background-size: cover;
     width: 103.342px;
     height: 126.166px;
-    left: 23.2638%;
-    top: 32.03%;
-    transform: translate(149%, 95%);
+    left: 38.15%;
+    top: 29.88%;
+    transform: translate(39%, 113%);
     }
 }
 %venus-surface {
@@ -215,9 +215,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 19.44%;
-    top: 26.66%;
-    transform: translate(177%, 140%);
+    left: 33.59%;
+    top: 26.56%;
+    transform: translate(72%, 140%);
     }
 }
 %earth-surface {
@@ -233,9 +233,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 17.71%;
-    top: 24.22%;
-    transform: translate(189%, 159%);
+    left: 31.51%;
+    top: 25%;
+    transform: translate(88%, 153%);
     }
 }
 %mars-surface {
@@ -251,9 +251,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 21.67%;
-    top: 29.78%;
-    transform: translate(160%, 116%);
+    left: 36.197%;
+    top: 28.515%;
+    transform: translate(54%, 124%);
     }
 }
 %jupiter-surface {
@@ -269,9 +269,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 13.12%;
-    top: 17.77%;
-    transform: translate(224%, 213%);
+    left: 26.041%;
+    top: 20.898%;
+    transform: translate(129%, 187%);
   }
 }
 %saturn-surface {
@@ -287,9 +287,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 10.20%;
-    top: 15.22%;
-    transform: translate(244%, 200%);
+    left: 22.526%;
+    top: 18.261%;
+    transform: translate(154%, 200%);
   }
 }
 %uranus-surface {
@@ -305,9 +305,9 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 17.43%;
-    top: 23.83%;
-    transform: translate(192%, 165%);
+    left: 31.25%;
+    top: 24.7%;
+    transform: translate(92%, 155%);
     }
 }
 %neptune-surface {
@@ -323,8 +323,8 @@
   @include mq-tablet {
     width: 103.342px;
     height: 126.166px;
-    left: 17.71%;
-    top: 24.22%;
-    transform: translate(190%, 160%);
+    left: 30%;
+    top: 25%;
+    transform: translate(88%, 154%);
     }
 }
