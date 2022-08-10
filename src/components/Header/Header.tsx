@@ -4,6 +4,7 @@ import './Header.scss'
 import Props from './Type'
 import PlanetData from '../PlanetDataType'
 import { Link } from 'react-router-dom'
+import MobileMenu from './MobileMenu/MobileMenu'
 
 const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology, setOverview}) => {
   const handleClick = (planet:PlanetData) => {
@@ -25,6 +26,7 @@ const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, set
           ))
         }
       </div>
+      <MobileMenu/>
       <div className='header__patternDivider'></div>
     </div>
   )

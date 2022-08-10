@@ -1,0 +1,10 @@
+@import '../Header.scss';
+
+.mobileMenu {
+  background-image: url('../../../assets/icon-hamburger.svg');
+  box-sizing: border-box;
+  border: none;
+  background-color: inherit;
+  width: 24px;
+  height: 17px;
+}

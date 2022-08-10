@@ -5,7 +5,7 @@
 }
 
 @mixin mq-tablet {
-  @media screen and (max-width: $mq-tablet) {
+  @media screen and (min-width: $mq-mobile) and (max-width: $mq-tablet) {
     @content;
   }
 }

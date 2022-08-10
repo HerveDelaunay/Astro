@@ -1,0 +1,160 @@
+@import './mixins';
+
+%mercury {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  left: 23.2638%;
+  top: 32.03%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 184px;
+    height: 184px;
+    left: 38.15%;
+    top: 29.88%;
+  }
+  @include mq-mobile {
+    width: 111px;
+    height: 111px;
+    left: 35.2%;
+    top: 22.6315%;
+  }
+}
+%venus {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  left: 19.44%;
+  top: 26.66%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 253px;
+    height: 253px;
+    left: 33.59%;
+    top: 26.56%;
+  }
+  @include mq-mobile {
+    width: 154px;
+    height: 154px;
+    left: 35.2%;
+    top: 29.333%;
+  }
+}
+%earth {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 17.71%;
+  top: 24.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 285px;
+    height: 285px;
+    left: 31.51%;
+    top: 25%;
+  }
+  @include mq-mobile {
+    width: 173px;
+    height: 173px;
+    left: 26.933%;
+    top: 28.307%;
+  }
+}
+%mars {
+  position: absolute;
+  width: 336px;
+  height: 336px;
+  left: 21.67%;
+  top: 29.78%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 213px;
+    height: 213px;
+    left: 36.197%;
+    top: 28.515%;
+  }
+  @include mq-mobile {
+    width: 129px;
+    height: 129px;
+    left: 32.533%;
+    top: 21.789%;
+  }
+}
+%jupiter {
+  position: absolute;
+  width: 582px;
+  height: 582px;
+  left: 13.12%;
+  top: 17.77%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 369px;
+    height: 369px;
+    left: 26.041%;
+    top: 20.898%;
+  }
+  @include mq-mobile {
+    width: 224px;
+    height: 224px;
+    left: 20%;
+    top: 16.736%;
+  }
+}
+%saturn {
+  position: absolute;
+  width: 666.09px;
+  height: 666.09px;
+  left: 10.20%;
+  top: 15.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 422px;
+    height: 422px;
+    left: 22.526%;
+    top: 18.261%;
+  }
+  @include mq-mobile {
+    width: 256px;
+    height: 256px;
+    left: 14.466%;
+    top: 15.157%;
+  }
+}
+%uranus {
+  position: absolute;
+  width: 458px;
+  height: 458px;
+  left: 17.43%;
+  top: 23.83%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 290px;
+    height: 290px;
+    left: 31.25%;
+    top: 24.7%;
+  }
+  @include mq-mobile {
+    width: 176px;
+    height: 176px;
+    left: 26.4%;
+    top: 19.263%;
+  }
+}
+%neptune {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 17.71%;
+  top: 24.22%;
+  background-size: cover;
+  @include mq-tablet {
+    width: 173px;
+    height: 173px;
+    left: 26.933%;
+    top: 19.368%;
+  }
+}
+%btn-hover {
+  background-color: $grey;
+  border: none;
+}
