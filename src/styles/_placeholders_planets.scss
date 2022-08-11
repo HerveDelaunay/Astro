@@ -148,6 +148,12 @@
   top: 24.22%;
   background-size: cover;
   @include mq-tablet {
+    width: 285px;
+    height: 285px;
+    left: 30%;
+    top: 25%;
+  }
+  @include mq-mobile {
     width: 173px;
     height: 173px;
     left: 26.933%;

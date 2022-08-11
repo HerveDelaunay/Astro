@@ -110,14 +110,6 @@
   }
 }
 .planet {
-  // @include mq-desktop {
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   left: 64.24%;
-  //   top: 20.70%;
-  //   height: 52.83%;
-  //   width: 24.30%;
-  // }
   @include mq-tablet {
     position: absolute;
     display: flex;
@@ -129,13 +121,6 @@
     width: 89.71%;
     height: 24.7%;
   }
-  // @include mq-mobile {
-  //   position: absolute;
-  //   width: 87.2%;
-  //   height: 24.736%;
-  //   top: 44.631%;
-  //   left: 6.4%;
-  // }
 }
 .planet__article {
   display: flex;
@@ -185,9 +170,9 @@
 .planet__buttons {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   @include mq-desktop {
     position: absolute;
-    flex-direction: column;
     height: 176px;
     top: 56.347%;
     width: 24.30%;
@@ -195,7 +180,6 @@
     left: 64.24%;
   }
   @include mq-tablet {
-    flex-direction: column;
     top: 56.347%;
     width: 40.78%;
     height: 60.07%;
@@ -203,15 +187,15 @@
   @include mq-mobile {
     position: absolute;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 7.3%;
     width: 100%;
     height: 50px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
   }
 }
 .button {
   @extend %h3;
-  width: 100%;
   box-sizing: border-box;
   background-color: inherit;
   mix-blend-mode: normal;
@@ -219,45 +203,112 @@
   position: relative;
   @include mq-desktop {
     height: 48px;
-  }
-  @include mq-tablet {
-    height: 26.31%;
-  }
-  @include mq-mobile {
-    height: 100%;
-    border: none;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-  }
+    width: 100%;
     &:hover {
       background-color: $grey;
       border: none;
     }
     &--active--0 {
-      @include btn-active($light-blue)
+      @include btn-active($light-blue);
     }
     &--active--1 {
-      @include btn-active($yellow)
+      @include btn-active($yellow);
+
     }
     &--active--2 {
-      @include btn-active($purple)
+      @include btn-active($purple);
+
     }
     &--active--3 {
-      @include btn-active($orange)
+      @include btn-active($orange);
+
     }
     &--active--4 {
-      @include btn-active($red)
+      @include btn-active($red);
+
     }
     &--active--5 {
-      @include btn-active($orange-mat)
+      @include btn-active($orange-mat);
+
     }
     &--active--6 {
-      @include btn-active($green)
+      @include btn-active($green);
     }
     &--active--7 {
-      @include btn-active($blue)
+      @include btn-active($blue);
     }
+  }
+  @include mq-tablet {
+    height: 26.31%;
+    width: 100%;
+
+    &--active--0 {
+      @include btn-active($light-blue);
+    }
+    &--active--1 {
+      @include btn-active($yellow);
+
+    }
+    &--active--2 {
+      @include btn-active($purple);
+
+    }
+    &--active--3 {
+      @include btn-active($orange);
+
+    }
+    &--active--4 {
+      @include btn-active($red);
+
+    }
+    &--active--5 {
+      @include btn-active($orange-mat);
+
+    }
+    &--active--6 {
+      @include btn-active($green);
+    }
+    &--active--7 {
+      @include btn-active($blue);
+    }
+  }
+  @include mq-mobile {
+    height: 100%;
+    width: 21.333%;
+    border: none;
+    padding-block: 4px;
+    
+    &--active--0 {
+      @include btn-active-mobile($light-blue);
+    }
+    &--active--1 {
+      @include btn-active-mobile($yellow);
+
+    }
+    &--active--2 {
+      @include btn-active-mobile($purple);
+
+    }
+    &--active--3 {
+      @include btn-active-mobile($orange);
+
+    }
+    &--active--4 {
+      @include btn-active-mobile($red);
+
+    }
+    &--active--5 {
+      @include btn-active-mobile($orange-mat);
+
+    }
+    &--active--6 {
+      @include btn-active-mobile($green);
+    }
+    &--active--7 {
+      @include btn-active-mobile($blue);
+    }
+  }
+   
 }
 .button__number {
   position: absolute;
@@ -280,6 +331,11 @@
     left: 21.14%;
   }
   @include mq-mobile {
-    text-align: center;
+    color: rgb(255, 255, 255, 0.5);
+  }
+}
+.remove__word {
+  @include mq-mobile {
+    display: none;
   }
 }

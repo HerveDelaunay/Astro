@@ -21,3 +21,15 @@
   border: none;
   pointer-events: none;
 }
+@mixin btn-active-tablet ($color){
+  background-color: $color;
+  border: none;
+  pointer-events: none;
+}
+@mixin btn-active-mobile ($color){
+  background-color: inherit;
+  color: $white;
+  border-bottom: solid 4px $color;
+  pointer-events: none;
+  padding-bottom: 0px;
+}

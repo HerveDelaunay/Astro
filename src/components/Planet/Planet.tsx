@@ -67,24 +67,24 @@ const Planet: React.FC<Props> = ({planetId, internalStructure, setInternalStruct
             internalStructure ? (
             <button className={`button button--active--${planetId}`} onClick={() => handleClickInternal()}>
               <div className='button__number'>02</div>
-              <div className='button__title'>INTERNAL STRUCTURE</div>
+              <div className='button__title'><span className='remove__word'>INTERNAL</span> STRUCTURE</div>
             </button>
             ) : (
             <button className={`button`} onClick={() => handleClickInternal()}>
               <div className='button__number'>02</div>
-              <div className='button__title'>INTERNAL STRUCTURE</div>
+              <div className='button__title'><span className='remove__word'>INTERNAL</span> STRUCTURE</div>
             </button> 
             )
           }
           { surfaceGeology ? (
             <button className={`button button--active--${planetId}`} onClick={()=>handleClickSurface()}>
               <div className='button__number'>03</div>
-              <div className='button__title'>SURFACE GEOLOGY</div>
+              <div className='button__title'>SURFACE <span className='remove__word'>GEOLOGY</span></div>
             </button>
             ) : (
             <button className={`button`} onClick={()=>handleClickSurface()}>
               <div className='button__number'>03</div>
-              <div className='button__title'>SURFACE GEOLOGY</div>
+              <div className='button__title'>SURFACE <span className='remove__word'>GEOLOGY</span></div>
             </button>
             )
 

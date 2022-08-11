@@ -1,8 +1,11 @@
 import './MobileMenu.scss'
 
-const MobileMenu = () => {
+const MobileMenu: React.FC = () => {
+  const handleClick = () => {
+
+  }
   return (
-    <button className='mobileMenu'>
+    <button className='mobileMenu' onClick={() => handleClick}>
     </button>
   )
 }
