@@ -1,17 +1,22 @@
-import { useEffect, useState } from 'react'
 import data from '../../assets/data.json'
 import './Header.scss'
 import Props from './Type'
 import PlanetData from '../PlanetDataType'
 import { Link } from 'react-router-dom'
-import MobileMenu from './MobileMenu/MobileMenu'
 
-const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology, setOverview}) => {
+const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, setSurfaceGeology, setOverview, mobileMenuOpened, setMobileMenuOpened}) => {
   const handleClick = (planet:PlanetData) => {
     setPlanet(data.indexOf(planet))
     setInternalStructure(false)
     setSurfaceGeology(false)
     setOverview(true)
+  }
+  const handleClickMenu = () => {
+    if(mobileMenuOpened) {
+      setMobileMenuOpened(false)
+      return
+    }
+    setMobileMenuOpened(true)
   }
   
   return (
@@ -26,7 +31,13 @@ const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, set
           ))
         }
       </div>
-      <MobileMenu/>
+      {
+        mobileMenuOpened ? (
+          <button className='mobileMenuLogo--active' onClick={() => handleClickMenu()}></button>
+        ) : (
+          <button className='mobileMenuLogo' onClick={() => handleClickMenu()}></button>
+        )
+      }
       <div className='header__patternDivider'></div>
     </div>
   )

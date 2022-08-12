@@ -43,11 +43,17 @@ const Planet: React.FC<Props> = ({planetId, internalStructure, setInternalStruct
             : surfaceGeology ? data[planetId].geology.content 
             : data[planetId].overview.content }
           </div>
-          <div className='planet__source'>Source : <a href=
+          <div className='planet__source'>
+            <div>
+            Source : 
+            </div>
+            <a href=
             { internalStructure ? data[planetId].structure.source 
               : surfaceGeology ? data[planetId].geology.source 
               : data[planetId].overview.source } 
-            className='planet__link'>Wikipedia</a>
+            className='planet__link'>Wikipedia 
+            </a>
+            <div className='link__logo'></div>
           </div>
         </article>
         <div className='planet__buttons'>

@@ -5,29 +5,39 @@ import './App.scss';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import data from '../../assets/data.json'
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 const App: React.FC = () => {
   const [planet, setPlanet] = useState<number>(0)
   const [internalStructure, setInternalStructure] = useState<boolean>(false)
   const [surfaceGeology, setSurfaceGeology] = useState<boolean>(false)
   const [overview, setOverview] = useState<boolean>(true)
+  const [mobileMenuOpened, setMobileMenuOpened] = useState<boolean>(false)
   const slug = window.location.pathname.slice(1)
 
   useEffect(() => {
     if(planet) return
+    // if(window.location.pathname === "/") setPlanet(0)
     const slugToIndex = data.findIndex((planet) => planet.name === slug)
     setPlanet(slugToIndex)
+    // console.log(planet)
   }, [slug])
   
   return (
-    <div className="App">
-       <Header setPlanet={setPlanet} 
+    <div className={`App ${mobileMenuOpened && 'App--mobile'}`}>
+      <Header setPlanet={setPlanet} 
           planetId={planet} 
           setInternalStructure={setInternalStructure} 
           setSurfaceGeology={setSurfaceGeology}
           setOverview={setOverview}
+          mobileMenuOpened={mobileMenuOpened}
+          setMobileMenuOpened={setMobileMenuOpened}
         />
-      <Routes>
+      {
+        mobileMenuOpened ? (
+          <MobileMenu setMobileMenuOpened={setMobileMenuOpened} planetId={planet} setPlanet={setPlanet}/>
+          ) : (
+            <Routes>
         <Route path='/' element={
           <>
             <Planet planetId={planet} 
@@ -55,6 +65,8 @@ const App: React.FC = () => {
           </>
         }/>
       </Routes>
+          )
+      }
     </div>
   );
 }

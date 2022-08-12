@@ -1,0 +1,80 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+.mobileMenu {
+  all: unset;
+  position: absolute;
+  top: 93px;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $black;
+}
+.mobileMenu__buttons {
+  height: 520px;
+  width: 87.2%;
+  background-color: inherit;
+}
+.mobileMenu__button {
+  all: unset;
+  color: $white;
+  border-bottom: solid 1px rgb(255, 255, 255, 0.1);
+  height: 65px;
+  width: 100%;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+}
+.mobileButton__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileButton__title {
+  color: $white;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1.36px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-left: 7.339%;
+}
+.mobileButton__logo {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+
+  &--0 {
+    background-color: #DEF4FC;
+  }
+  &--1 {
+    background-color: #F7CC7F;
+  }
+  &--2 {
+    background-color: #545BFE;
+  }
+  &--3 {
+    background-color: #FF6A45;
+  }
+  &--4 {
+    background-color: #ECAD7A;
+  }
+  &--5 {
+    background-color: #FCCB6B;
+  }
+  &--6 {
+    background-color: #65F0D5;
+  }
+  &--7 {
+    background-color: #497EFA;
+  }
+}
+.mobileButton__chevron {
+  background-image: url('../../assets/icon-chevron.svg');
+  width: 6px;
+  height: 8px;
+}

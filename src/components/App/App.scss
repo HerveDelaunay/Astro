@@ -11,6 +11,12 @@ html,body {
   position: relative;
 
   @include mq-mobile {
-    height: 950px
+    height: 950px;
+    width: 100%;
   }
+}
+.App--mobile {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
 }
