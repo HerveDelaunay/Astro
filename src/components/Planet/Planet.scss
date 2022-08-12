@@ -1,18 +1,9 @@
 @import '../../styles/vars';
 @import '../../styles/placeholders';
 @import '../../styles/mixins';
+@import '../../styles/placeholders_fonts';
+@import '../../styles/placeholders_planets';
 
-.planet {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  left: 64.24%;
-  top: 20.70%;
-  height: 52.83%;
-  //height: 541px;
-  width: 24.30%;
-}
 .logo {
 
   &--0{
@@ -87,118 +78,293 @@
 
   &--0{
     background-image: url('../../assets/geology-mercury.png');
-    @extend %mercury-surface
+    @extend %mercury-surface;
   }
   &--1{
     background-image: url('../../assets/geology-venus.png');
-    @extend %venus-surface
+    @extend %venus-surface;
   }
   &--2{
     background-image: url('../../assets/geology-earth.png');
-    @extend %earth-surface
+    @extend %earth-surface;
   }
   &--3{
     background-image: url('../../assets/geology-mars.png');
-    @extend %mars-surface
+    @extend %mars-surface;
   }
   &--4{
     background-image: url('../../assets/geology-jupiter.png');
-    @extend %jupiter-surface
+    @extend %jupiter-surface;
   }
   &--5{
     background-image: url('../../assets/geology-saturn.png');
-    @extend %saturn-surface
+    @extend %saturn-surface;
   }
   &--6{
     background-image: url('../../assets/geology-uranus.png');
-    @extend %uranus-surface
+    @extend %uranus-surface;
   }
   &--7{
     background-image: url('../../assets/geology-neptune.png');
-    @extend %neptune-surface
+    @extend %neptune-surface;
+  }
+}
+.planet {
+  @include mq-tablet {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 60.546%;
+    left: 5.078%;
+    width: 89.71%;
+    height: 24.7%;
+  }
+}
+.planet__article {
+  display: flex;
+  @include mq-desktop {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 64.24%;
+    top: 20.70%;
+    width: 24.30%;
+    height: 31.83%;
+  }
+  @include mq-tablet {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 49.20%;
+    height: 100%;
+  }
+  @include mq-mobile {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    width: 87.2%;
+    height: 24.736%;
+    top: 44.631%;
+    left: 6.4%
   }
 }
 .planet__title {
-  @extend %h1;
-  // position: absolute;
-  // left: 64.24%;
-  // top: 20.70%;
   text-transform: uppercase;
+  @extend %h1;
 }
 .planet__description {
   @extend %body;
+  text-align: start;
   width: 100%;
-  //width: 24.31%;
-  //height: 14.65%;
-  //position: absolute;
-  // top: 33.1%;
-  // left: 64.24%;
+  @include mq-mobile {
+    text-align: center;
+    margin-top: 6.80%;
+    margin-bottom: 13.617%;
+  }
 }
 .planet__source {
   @extend %body;
   mix-blend-mode: normal;
   color: rgb(255, 255, 255, 0.5);
-  // position: absolute;
-  // left: 64.24%;
-  // top: 50.09%;
+  @include mq-mobile {
+    // width: 42.50%;
+    height: 10.638%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq-tablet {
+    height: 10.638%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  @include mq-desktop {
+    display: flex;
+    align-items: center;
+  }
 }
 .planet__link {
   color: inherit;
+  padding-inline: 4px;
+}
+.link__logo {
+  background-image: url('../../assets/icon-source.svg');
+  width: 12px;
+  height: 12px;
+  color: rgb(255, 255, 255, 0.5);
 }
 .planet__buttons {
-  width: 100%;
-  height: 176px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
+  @include mq-desktop {
+    position: absolute;
+    height: 176px;
+    top: 56.347%;
+    width: 24.30%;
+    height: 17.187%;
+    left: 64.24%;
+  }
+  @include mq-tablet {
+    top: 56.347%;
+    width: 40.78%;
+    height: 60.07%;
+  }
+  @include mq-mobile {
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 7.3%;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  }
 }
 .button {
   @extend %h3;
-  width: 100%;
-  height: 48px;
   box-sizing: border-box;
   background-color: inherit;
   mix-blend-mode: normal;
   border: 1px solid rgb(255, 255, 255, 0.2);
   position: relative;
-
+  @include mq-desktop {
+    height: 48px;
+    width: 100%;
     &:hover {
       background-color: $grey;
       border: none;
     }
     &--active--0 {
-      @include btn-active($light-blue)
+      @include btn-active($light-blue);
     }
     &--active--1 {
-      @include btn-active($yellow)
+      @include btn-active($yellow);
+
     }
     &--active--2 {
-      @include btn-active($purple)
+      @include btn-active($purple);
+
     }
     &--active--3 {
-      @include btn-active($orange)
+      @include btn-active($orange);
+
     }
     &--active--4 {
-      @include btn-active($red)
+      @include btn-active($red);
+
     }
     &--active--5 {
-      @include btn-active($orange-mat)
+      @include btn-active($orange-mat);
+
     }
     &--active--6 {
-      @include btn-active($green)
+      @include btn-active($green);
     }
     &--active--7 {
-      @include btn-active($blue)
+      @include btn-active($blue);
     }
+  }
+  @include mq-tablet {
+    height: 26.31%;
+    width: 100%;
+
+    &--active--0 {
+      @include btn-active($light-blue);
+    }
+    &--active--1 {
+      @include btn-active($yellow);
+
+    }
+    &--active--2 {
+      @include btn-active($purple);
+
+    }
+    &--active--3 {
+      @include btn-active($orange);
+
+    }
+    &--active--4 {
+      @include btn-active($red);
+
+    }
+    &--active--5 {
+      @include btn-active($orange-mat);
+
+    }
+    &--active--6 {
+      @include btn-active($green);
+    }
+    &--active--7 {
+      @include btn-active($blue);
+    }
+  }
+  @include mq-mobile {
+    height: 100%;
+    width: 21.333%;
+    border: none;
+    padding-block: 4px;
+    
+    &--active--0 {
+      @include btn-active-mobile($light-blue);
+    }
+    &--active--1 {
+      @include btn-active-mobile($yellow);
+
+    }
+    &--active--2 {
+      @include btn-active-mobile($purple);
+
+    }
+    &--active--3 {
+      @include btn-active-mobile($orange);
+
+    }
+    &--active--4 {
+      @include btn-active-mobile($red);
+
+    }
+    &--active--5 {
+      @include btn-active-mobile($orange-mat);
+
+    }
+    &--active--6 {
+      @include btn-active-mobile($green);
+    }
+    &--active--7 {
+      @include btn-active-mobile($blue);
+    }
+  }
+   
 }
 .button__number {
   position: absolute;
   top: 25%;
   left: 8%;
   color: rgb(255, 255, 255, 0.2);
+  @include mq-mobile {
+    display: none;
+  }
 }
 .button__title {
-  position: absolute;
-  top: 25%;
-  left: 21.14%;
+  @include mq-desktop {
+    position: absolute;
+    top: 25%;
+    left: 21.14%;
+  }
+  @include mq-tablet {
+    position: absolute;
+    top: 25%;
+    left: 21.14%;
+  }
+  @include mq-mobile {
+    color: rgb(255, 255, 255, 0.5);
+  }
+}
+.remove__word {
+  @include mq-mobile {
+    display: none;
+  }
 }

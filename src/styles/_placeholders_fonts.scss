@@ -1,0 +1,94 @@
+@import './mixins';
+@import './reset';
+// fonts
+%h1 {
+  font-family: 'Antonio', sans-serif;
+  color: $white;
+  @include mq-desktop {
+    font-size: 80px;
+    line-height: 103px;
+  }
+  @include mq-tablet {
+    font-size: 48px;
+    line-height: 61px;
+  }
+  @include mq-mobile {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+%h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  color: $white;
+  text-transform: uppercase;
+  @include mq-tablet {
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.9px;
+  }
+  @include mq-mobile {
+    font-size: 20px;
+    line-height: 25.88px;
+    letter-spacing: -0.75px;
+  }
+}
+%h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  color: $white;
+  @include mq-desktop {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.6px;
+  }
+  @include mq-tablet {
+    font-size: 9px;
+    line-height: 25px;
+    letter-spacing: 1.93px;
+  }
+  @include mq-mobile {
+    font-size: 9px;
+    line-height: 10px;
+    letter-spacing: 1.93px;
+  }
+}
+%h4 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  color: $white;
+  text-transform: capitalize;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  @include mq-tablet {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.73px;
+  }
+  @include mq-mobile {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.73px;
+  }
+}
+%body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: normal;
+  color: $white;
+  @include mq-desktop {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  @include mq-tablet {
+    font-size: 11px;
+    line-height: 22px;
+  }
+  @include mq-mobile {
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+  }
+}

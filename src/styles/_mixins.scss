@@ -1,17 +1,17 @@
 @mixin mq-mobile {
-  @media screen and (min-width: $mq-mobile) {
+  @media screen and (max-width: $mq-mobile) {
     @content;
   }
 }
 
 @mixin mq-tablet {
-  @media screen and (min-width: $mq-tablet) {
+  @media screen and (min-width: $mq-mobile) and (max-width: $mq-tablet) {
     @content;
   }
 }
 
 @mixin mq-desktop {
-  @media screen and (min-width: $mq-desktop) {
+  @media screen and (min-width: $mq-tablet) {
     @content;
   }
 }
@@ -20,4 +20,16 @@
   background-color: $color;
   border: none;
   pointer-events: none;
+}
+@mixin btn-active-tablet ($color){
+  background-color: $color;
+  border: none;
+  pointer-events: none;
+}
+@mixin btn-active-mobile ($color){
+  background-color: inherit;
+  color: $white;
+  border-bottom: solid 4px $color;
+  pointer-events: none;
+  padding-bottom: 0px;
 }

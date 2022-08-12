@@ -1,13 +1,23 @@
 @import '../../styles/vars';
 @import '../../styles/placeholders';
 @import '../../styles/mixins';
+@import '../../styles/placeholders_fonts';
 
+.header {
+  box-sizing: border-box;
+  @include mq-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    padding-inline: 24px;
+    border-bottom: solid 1px rgb(255, 255, 255, 0.2);
+  }
+}
 .header__title {
-  position: absolute;
   width: 109px;
   height: 36px;
-  left: 2.22%;
-  top: 2.15%;
   font-family: 'Antonio';
   font-weight: 400;
   font-size: 28px;
@@ -17,12 +27,20 @@
   color: $white;
   text-decoration: none;
 
-  // @include mq-desktop {
-  //   top: 3.13%;
-  // }
-  // @include mq-tablet {
-  //   top: 3.13%;
-  // }
+  @include mq-desktop {
+    position: absolute;
+    left: 2.22%;
+    top: 2.15%;
+  }
+  @include mq-tablet {
+    position: absolute;
+    top: 3.125%;
+    left: 42.968%;
+  }
+  @include mq-mobile {
+    top: 3.125%;
+    left: 42.968%;
+  }
 }
 .header__planetNames {
   @extend %h4;
@@ -31,75 +49,127 @@
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  width: 665px;
-  height: 6.35%;
-  right: 2.78%;
-  top: 0%;
 
-  // @include mq-desktop {
-  //   top: 3.13%;
-  // }
-  // @include mq-tablet {
-  //   top: 10.45%;
-  //   right: 6.77%;
-  // }
+  @include mq-desktop {
+    top: 0%;
+    right: 2.78%;
+    height: 6.35%;
+    width: 46.18%;
+  }
+  @include mq-tablet {
+    top: 10.45%;
+    right: 6.77%;
+    height: 2.44%;
+    width: 86.588%;
+  }
+  @include mq-mobile {
+    display: none;
+  }
 }
 .header__patternDivider {
   position: absolute;
   width: 100%;
   height: 1px;
-  left: 0%;
-  top: 8.3%;
   background: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.2;
+
+  @include mq-desktop {
+    top: 8.3%;
+  }
+  @include mq-tablet {
+    top: 15.527%;
+  }
+  @include mq-mobile {
+    display: none;
+  }
 }
 .planetLink {
   mix-blend-mode: normal;
   color: rgb(255, 255, 255, 0.5);
   text-decoration: none;
-  padding-top: 33px;
   height: 100%;
   position: relative;
+  @include mq-desktop {
+    padding-top: 33px;
+  }
 
   &--0 {
-    color: white;
-    padding-top: 28px;
-    border-top: solid 5px $light-blue;
+    color: $white;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $light-blue;
+    }
   }
   &--1 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $yellow;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $yellow;
+    }
   }
   &--2 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $purple;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $purple;
+    }
   }
   &--3 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $orange;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $orange;
+    }
   }
   &--4 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $red;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $red;
+    }
   }
   &--5 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $orange-mat;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $orange-mat;
+    }
   }
   &--6 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $green;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $green;
+    }
   }
   &--7 {
     color: white;
-    padding-top: 28px;
-    border-top: solid 5px $blue;
+    @include mq-desktop {
+      padding-top: 28px;
+      border-top: solid 5px $blue;
+    }
+  }
+}
+.mobileMenuLogo {
+  background-image: url('../../assets/icon-hamburger.svg');
+  box-sizing: border-box;
+  border: none;
+  background-color: inherit;
+  width: 24px;
+  height: 17px;
+  @include mq-desktop {
+    display: none;
+  }
+  @include mq-tablet {
+    display: none;
+  }
+  &--active {
+    background-image: url('../../assets/icon-hamburger-active.svg');
+    box-sizing: border-box;
+    border: none;
+    background-color: inherit;
+    width: 24px;
+    height: 17px;
   }
 }

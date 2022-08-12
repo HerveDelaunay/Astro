@@ -1,171 +1,204 @@
-// fonts
-%h1 {
-  font-family: 'Antonio', sans-serif;
-  font-size: 80px;
-  line-height: 103px;
-  color: $white;
-}
-%h2 {
-  font-family: 'Antonio', sans-serif;
-  font-size: 40px;
-  line-height: 52px;
-  letter-spacing: -1.5px;
-  color: $white;
-  text-transform: uppercase;
-}
-%h3 {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: 2.6px;
-  font-weight: bold;
-  color: $white;
-}
-%h4 {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: $white;
-  text-transform: capitalize;
-}
-%body {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 14px;
-  line-height: 25px;
-  font-weight: normal;
-  color: $white;
-}
-%mercury {
-  position: absolute;
-  width: 290px;
-  height: 290px;
-  left: 23.2638%;
-  top: 32.03%;
-}
-%venus {
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  left: 19.44%;
-  top: 26.66%;
-}
-%earth {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  left: 17.71%;
-  top: 24.22%;
-}
-%mars {
-  position: absolute;
-  width: 336px;
-  height: 336px;
-  left: 21.67%;
-  top: 29.78%;
-}
-%jupiter {
-  position: absolute;
-  width: 582px;
-  height: 582px;
-  left: 13.12%;
-  top: 17.77%;
-}
-%saturn {
-  position: absolute;
-  width: 666.09px;
-  height: 666.09px;
-  left: 10.20%;
-  top: 15.22%;
-}
-%uranus {
-  position: absolute;
-  width: 458px;
-  height: 458px;
-  left: 17.43%;
-  top: 23.83%;
-}
-%neptune {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  left: 17.71%;
-  top: 24.22%;
-}
-%btn-hover {
-  background-color: $grey;
-  border: none;
-}
+@import './mixins';
+
 %mercury-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 23.2638%;
-  top: 32.03%;
-  transform: translate(40%, 113%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 23.2638%;
+    top: 32.03%;
+    transform: translate(40%, 113%);
+  }
+  @include mq-tablet {
+    background-size: cover;
+    width: 103.342px;
+    height: 126.166px;
+    left: 38.15%;
+    top: 29.88%;
+    transform: translate(39%, 113%);
+    }
+  @include mq-mobile {
+    background-size: cover;
+    width: 62px;
+    height: 76px;
+    left: 35.2%;
+    top: 22.6315%;
+    transform: translate(39%, 113%);
+    }
 }
 %venus-surface {
   position: absolute;
-  height: 199px;
-  width: 163px;
-  left: 19.44%;
-  top: 26.66%;
-  transform: translate(73%, 140%);
   background-size: cover;
+  @include mq-desktop {
+    height: 199px;
+    width: 163px;
+    left: 19.44%;
+    top: 26.66%;
+    transform: translate(73%, 140%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 33.59%;
+    top: 26.56%;
+    transform: translate(72%, 140%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 29.33%;
+    top: 20.421%;
+    transform: translate(72%, 140%);
+  }
 }
 %earth-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.71%;
-  top: 24.22%;
-  transform: translate(89%, 154%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(89%, 154%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 31.51%;
+    top: 25%;
+    transform: translate(88%, 153%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 26.933%;
+    top: 19.36%;
+    transform: translate(88%, 153%);
+  }
 }
 %mars-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 21.67%;
-  top: 29.78%;
-  transform: translate(54%, 125%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 21.67%;
+    top: 29.78%;
+    transform: translate(54%, 125%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 36.197%;
+    top: 28.515%;
+    transform: translate(54%, 124%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 32.533%;
+    top: 21.789%;
+    transform: translate(54%, 124%);
+  }
 }
 %jupiter-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 13.12%;
-  top: 17.77%;
-  transform: translate(128%, 187%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 13.12%;
+    top: 17.77%;
+    transform: translate(128%, 187%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 26.041%;
+    top: 20.898%;
+    transform: translate(129%, 187%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 20%;
+    top: 16.736%;
+    transform: translate(129%, 187%);
+  }
 }
 %saturn-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 10.20%;
-  top: 15.22%;
-  transform: translate(155%, 200%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 10.20%;
+    top: 15.22%;
+    transform: translate(155%, 200%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 22.526%;
+    top: 18.261%;
+    transform: translate(154%, 200%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 14.466%;
+    top: 15.157%;
+    transform: translate(154%, 200%);
+  }
 }
 %uranus-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.43%;
-  top: 23.83%;
-  transform: translate(91%, 160%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.43%;
+    top: 23.83%;
+    transform: translate(91%, 160%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 31.25%;
+    top: 24.7%;
+    transform: translate(92%, 155%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 26.4%;
+    top: 19.263%;
+    transform: translate(92%, 155%);
+  }
 }
 %neptune-surface {
   position: absolute;
-  width: 163px;
-  height: 199px;
-  left: 17.71%;
-  top: 24.22%;
-  transform: translate(88%, 153%);
   background-size: cover;
+  @include mq-desktop {
+    width: 163px;
+    height: 199px;
+    left: 17.71%;
+    top: 24.22%;
+    transform: translate(88%, 153%);
+  }
+  @include mq-tablet {
+    width: 103.342px;
+    height: 126.166px;
+    left: 30%;
+    top: 25%;
+    transform: translate(88%, 154%);
+  }
+  @include mq-mobile {
+    width: 62px;
+    height: 76px;
+    left: 26.933%;
+    top: 19.368%;
+    transform: translate(88%, 154%);
+  }
 }

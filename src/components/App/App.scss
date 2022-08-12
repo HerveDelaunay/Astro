@@ -1,4 +1,5 @@
 @import '../../styles/vars';
+@import '../../styles/mixins';
 
 html,body {
   margin: auto;
@@ -8,4 +9,14 @@ html,body {
   background-color: $black;
   background-image: url('../../assets/background-stars.svg');
   position: relative;
+
+  @include mq-mobile {
+    height: 950px;
+    width: 100%;
+  }
+}
+.App--mobile {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
 }
