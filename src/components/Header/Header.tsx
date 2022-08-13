@@ -21,7 +21,7 @@ const Header: React.FC<Props> = ({setPlanet, planetId, setInternalStructure, set
   
   return (
     <div className='header'>
-      <a href='#' className='header__title'>The Planets</a>
+      <a href='/' className='header__title'>The Planets</a>
       <div className='header__planetNames'>
         {
           data.map((planet) => (

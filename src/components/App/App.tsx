@@ -17,10 +17,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if(planet) return
-    // if(window.location.pathname === "/") setPlanet(0)
+   if(window.location.pathname === "/") setPlanet(0)
     const slugToIndex = data.findIndex((planet) => planet.name === slug)
-    setPlanet(slugToIndex)
-    // console.log(planet)
+    
   }, [slug])
   
   return (
