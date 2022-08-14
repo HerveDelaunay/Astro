@@ -17,10 +17,13 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if(planet) return
-   if(window.location.pathname === "/") setPlanet(0)
+    if(window.location.pathname === "/"){
+      setPlanet(0)
+      return
+    }
     const slugToIndex = data.findIndex((planet) => planet.name === slug)
-    
-  }, [slug])
+    setPlanet(slugToIndex)
+  })
   
   return (
     <div className={`App ${mobileMenuOpened && 'App--mobile'}`}>
@@ -36,7 +39,7 @@ const App: React.FC = () => {
         mobileMenuOpened ? (
           <MobileMenu setMobileMenuOpened={setMobileMenuOpened} planetId={planet} setPlanet={setPlanet}/>
           ) : (
-            <Routes>
+      <Routes>
         <Route path='/' element={
           <>
             <Planet planetId={planet} 
