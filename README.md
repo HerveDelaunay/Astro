@@ -69,7 +69,7 @@ open http://localhost:3000
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Typescript](https://www.typescriptlang.org/) - JS with an emphasis on types
-- [Figma] (https://www.figma.com/)
+- [Figma](https://www.figma.com/)
 
 ### What I learned
 
