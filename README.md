@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# Advice generator app 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [The App](#the-app)
+  - [What it looks like](#what-it-looks-like)
+  - [How to run the app ?](#how-to-run-the-app)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+### The App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app presents the several planets of our solar system and sums up what we know about them. The website is also available on tablet and mobile devices.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Check it out here : http://astro-test-v2.surge.sh
 
-### `npm test`
+### What it looks like 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Desktop version overview : 
 
-### `npm run build`
+![](./src/assets/astro-desktop-overview.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Internal structure of the planet : 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](./src/assets/astro-desktop-internal.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Surface geology of the planet : 
 
-### `npm run eject`
+![](./src/assets/astro-desktop-surface.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Tablet version overview : 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](./src/assets/astro-tablet.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Mobile version overview : 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![](./src/assets/astro-mobile.png)
 
-## Learn More
+![](./src/assets/astro-mobile-menu.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### How to run the app locally ? 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the project, then jump into your command line and run these :
+
+```bash
+# install dependencies
+yarn
+
+# start the application
+yarn start
+
+# open the application in the browser
+open http://localhost:3000
+```
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- SCSS
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Typescript](https://www.typescriptlang.org/) - JS with an emphasis on types
+- [Figma] (https://www.figma.com/)
+
+### What I learned
+
+It was my first time working with figma designs, while discovering the tool I quickly got trapped in the "pixel perfect" mindset and so abused the 
+```css 
+position: absolute
+```
+ atribute. That mistake cost me a lot while trying to make the website responsive. I'll have a completely different approach in my future projects, and I pretty much think that I won't use absolute position anymore except for rare cases.
+
+I've learned how to dynamically change my css classes thanks to javascript like so : 
+
+```js
+className={`planetLink ${window.location.pathname === `/${planet.name}` ? `planetLink--${planetId}` : '' }`}
+```
+Here the default className will be "planetLink" but if the slug matchs a planet name then the class 
+```js 
+planetLink--* 
+``` 
+will be added.
+
+### Continued development
+
+I witnessed some issues concerning the routing of the website. I also witnessed that the website doesn't display properly on laptop screensizes, it is due to the font-size that is not adaptating to the loss of screen size and also to the absolute position of some elements.
+
+I will try to fix all of these in the near future.
