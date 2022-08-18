@@ -5,7 +5,8 @@ interface Props {
   setSurfaceGeology: React.Dispatch<React.SetStateAction<boolean>>,
   planetId: number,
   overview: boolean,
-  setOverview: React.Dispatch<React.SetStateAction<boolean>>
+  setOverview: React.Dispatch<React.SetStateAction<boolean>>,
+  setPlanet: React.Dispatch<React.SetStateAction<number>>
 }
 
 export default Props
