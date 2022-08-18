@@ -1,4 +1,4 @@
-# Advice generator app 
+# Advice generator app
 
 ## Table of contents
 
@@ -17,33 +17,33 @@
 
 This app presents the several planets of our solar system and sums up what we know about them. The website is also available on tablet and mobile devices.
 
-Check it out here : http://astro-test-v2.surge.sh
+Check it out here : https://actually-way-test.surge.sh/
 
-### What it looks like 
+### What it looks like
 
-Desktop version overview : 
+Desktop version overview :
 
 ![](./src/assets/astro-desktop-overview.png)
 
-Internal structure of the planet : 
+Internal structure of the planet :
 
 ![](./src/assets/astro-desktop-internal.png)
 
-Surface geology of the planet : 
+Surface geology of the planet :
 
 ![](./src/assets/astro-desktop-surface.png)
 
-Tablet version overview : 
+Tablet version overview :
 
 ![](./src/assets/astro-tablet.png)
 
-Mobile version overview : 
+Mobile version overview :
 
 ![](./src/assets/astro-mobile.png)
 
 ![](./src/assets/astro-mobile-menu.png)
 
-### How to run the app locally ? 
+### How to run the app locally ?
 
 Clone the project, then jump into your command line and run these :
 
@@ -73,21 +73,26 @@ open http://localhost:3000
 
 ### What I learned
 
-It was my first time working with figma designs, while discovering the tool I quickly got trapped in the "pixel perfect" mindset and so abused the 
-```css 
-position: absolute
-```
- atribute. That mistake cost me a lot while trying to make the website responsive. I'll have a completely different approach in my future projects, and I pretty much think that I won't use absolute position anymore except for rare cases.
+It was my first time working with figma designs, while discovering the tool I quickly got trapped in the "pixel perfect" mindset and so abused the
 
-I've learned how to dynamically change my css classes thanks to javascript like so : 
+```css
+position: absolute;
+```
+
+atribute. That mistake cost me a lot while trying to make the website responsive. I'll have a completely different approach in my future projects, and I pretty much think that I won't use absolute position anymore except for rare cases.
+
+I've learned how to dynamically change my css classes thanks to javascript like so :
 
 ```js
 className={`planetLink ${window.location.pathname === `/${planet.name}` ? `planetLink--${planetId}` : '' }`}
 ```
-Here the default className will be "planetLink" but if the slug matchs a planet name then the class 
-```js 
-planetLink--* 
-``` 
+
+Here the default className will be "planetLink" but if the slug matchs a planet name then the class
+
+```js
+planetLink--*
+```
+
 will be added.
 
 ### Continued development
