@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Planet.scss";
 import data from "../../assets/data.json";
 import Props from "../Type";
-import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Planet: React.FC<Props> = ({
   planetId,
+  setPlanet,
   internalStructure,
   setInternalStructure,
   surfaceGeology,
@@ -13,8 +14,10 @@ const Planet: React.FC<Props> = ({
   overview,
   setOverview,
 }) => {
+  const { slug } = useParams();
   const [internal, setInternal] = useState(false);
   const [surface, setSurface] = useState(false);
+
   const handleClickInternal = () => {
     setInternalStructure(true);
     setSurfaceGeology(false);
@@ -30,6 +33,12 @@ const Planet: React.FC<Props> = ({
     setInternalStructure(false);
     setSurfaceGeology(true);
   };
+
+  useEffect(() => {
+    const slugToIndex = data.findIndex((planet) => planet.name === slug);
+    setPlanet(slugToIndex);
+  });
+
   return (
     <>
       {internalStructure ? (

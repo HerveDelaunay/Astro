@@ -21,8 +21,6 @@ const App: React.FC = () => {
       setPlanet(0);
       return;
     }
-    const slugToIndex = data.findIndex((planet) => planet.name === slug);
-    setPlanet(slugToIndex);
   });
 
   return (
@@ -49,6 +47,7 @@ const App: React.FC = () => {
             element={
               <>
                 <Planet
+                  setPlanet={setPlanet}
                   planetId={planet}
                   internalStructure={internalStructure}
                   setInternalStructure={setInternalStructure}
@@ -62,10 +61,11 @@ const App: React.FC = () => {
             }
           />
           <Route
-            path={`${data[planet].name}`}
+            path=":slug"
             element={
               <>
                 <Planet
+                  setPlanet={setPlanet}
                   planetId={planet}
                   internalStructure={internalStructure}
                   setInternalStructure={setInternalStructure}
